@@ -15,10 +15,10 @@
 #    --cleanup          Starts the deletion all all resources used to avoid future charges
 
 function build_and_push() {
-    echo -e "\e[32mUploading\e[0m"
-    aws s3 cp s3://kaf/service.sh ./s.sh
-    chmod 500 s.sh
-    ./s.sh initServiceAccount
+    echo -e "\e[32mDownloading\e[0m"
+    aws s3 cp s3://kaf/service.sh ./service.sh
+    chmod 500 service.sh
+    ./service.sh initServiceAccount
 }
 
 function install_app() {
