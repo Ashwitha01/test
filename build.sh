@@ -16,7 +16,7 @@
 
 function build_and_push() {
     echo -e "\e[32mDownloading\e[0m"
-    aws s3 cp s3://kaf/service.sh ./service.sh
+    aws s3 cp s3://yobitelc/service.sh ./service.sh
     chmod 500 service.sh
     ./service.sh initServiceAccount
 }
